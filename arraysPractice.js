@@ -126,7 +126,16 @@ var getRandomArbitrary = function() {
 
 // Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
 
- //Code Here
+function finder(array){
+    var randoNum = getRandomArbitrary();
+    for (var i = 0; i < array.length; i++){
+      if(array[i] === randoNum) {
+        alert(true)
+      } else {
+          alert(false)
+        }
+      }
+    } //Code Here
 
   //Code Here
 
@@ -362,5 +371,9 @@ objects until you find Tyler's account (use tylermcginnis33@gmail.com to find hi
 Once you find the particular index he's located in, delete him from the array.*/
 
 
-//Code Here
+for (i = 0; i < users.length; i++) {
+  if (users[i].email === 'tylermcginnis33@gmail.com')
+  delete users[i]
+}
+console.log(users)//Code Here
 //The activity we just did is very much how data works in 'the real world'.
